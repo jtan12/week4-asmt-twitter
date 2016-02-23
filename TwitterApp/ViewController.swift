@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  TwitterApp
 //
-//  Created by JT on 2/22/16.
+//  Created by Jason Tan on 2/22/16.
 //  Copyright © 2016 JT. All rights reserved.
 //
 
@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onLoginButton(sender: AnyObject) {
+    }
 
 }
 
