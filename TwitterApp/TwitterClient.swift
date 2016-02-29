@@ -105,4 +105,34 @@ class TwitterClient: BDBOAuth1SessionManager
     } // end func currentAccount
     
     
+    func retweetCount(id: String)
+    {
+        
+        POST("1.1/statuses/retweet/\(id).json", parameters: nil, constructingBodyWithBlock: nil, progress: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) -> Void in
+            
+            print("Retweet count incremented")
+            
+        }) { (task: NSURLSessionDataTask?, error: NSError) -> Void in
+                
+            print(error.localizedDescription)
+        }
+        
+    } // end func retweetCount
+    
+    
+    func favoriteCount(id: String)
+    {
+        
+        POST("1.1/favorites/create.json?id=\(id)", parameters: nil, constructingBodyWithBlock: nil, progress: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) -> Void in
+            
+            print("Favorite count incremented")
+            
+        }) { (task: NSURLSessionDataTask?, error: NSError) -> Void in
+                
+            print(error.localizedDescription)
+        }
+        
+    } // end func favoriteCount
+    
+    
 } // end class TwitterClient
