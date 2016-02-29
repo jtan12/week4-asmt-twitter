@@ -77,7 +77,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         cell.usernameLabel.text = tweet.user!.screenname as? String
         cell.timestampLabel.text = tweet.timestamp as? String
         cell.tweetLabel.text = tweet.text as? String
-
+ 
         
         return cell
     }

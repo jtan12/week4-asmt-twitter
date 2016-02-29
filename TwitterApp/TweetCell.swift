@@ -22,7 +22,7 @@ class TweetCell: UITableViewCell
     {
         super.awakeFromNib()
         // Initialization code
-        profileImageView.layer.cornerRadius = 5
+        profileImageView.layer.cornerRadius = 10
         profileImageView.clipsToBounds = true
         
     }
@@ -36,4 +36,4 @@ class TweetCell: UITableViewCell
     }
   
 
-}
+} // end class TweetCell

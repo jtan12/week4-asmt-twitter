@@ -35,7 +35,7 @@ class TwitterClient: BDBOAuth1SessionManager
             print("error: \(error.localizedDescription)")
             self.loginFailure?(error)
         }
-    }
+    } // end func login
     
     
     func logout()
@@ -45,7 +45,7 @@ class TwitterClient: BDBOAuth1SessionManager
         
         NSNotificationCenter.defaultCenter().postNotificationName(User.userDidLogoutNotification, object: nil)
         
-    }
+    } // end func logout
     
     
     func handleOpenUrl(url: NSURL)
@@ -66,7 +66,7 @@ class TwitterClient: BDBOAuth1SessionManager
             self.loginFailure?(error)
         }
         
-    }
+    } // end func handleOpenUrl
     
     
     func homeTimeline(success: ([Tweet]) -> (), failure: (NSError) -> ())
@@ -80,7 +80,7 @@ class TwitterClient: BDBOAuth1SessionManager
         }, failure: { (task: NSURLSessionDataTask?, error: NSError) -> Void in
             failure(error)
         })
-    }
+    } // end func homeTimeline
     
     
     func currentAccount(success: (User) -> (), failure: (NSError) -> ())
@@ -102,6 +102,7 @@ class TwitterClient: BDBOAuth1SessionManager
             failure(error)
                 
         })
-    }
+    } // end func currentAccount
+    
     
 } // end class TwitterClient
